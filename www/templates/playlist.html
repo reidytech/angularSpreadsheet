@@ -1,0 +1,71 @@
+<ion-view view-title="Playlist">
+  <ion-content>
+    <h1>Playlist</h1>
+
+
+    <div class="list list-inset">
+    <label class="item item-input">
+        <input ng-model="expression" type="text" placeholder="Math Goes Here" />
+    </label>
+</div>
+<div style="margin-top: 50px">
+  <div class="row">
+      <div class="col col-20 col-offset-10">
+          <button class="button button-light button-stretch" ng-click="add(1)">1</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(2)">2</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(3)">3</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add('-')">-</button>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col col-20 col-offset-10">
+          <button class="button button-light button-stretch" ng-click="add(4)">4</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(5)">5</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(6)">6</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add('+')">+</button>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col col-20 col-offset-10">
+          <button class="button button-light button-stretch" ng-click="add(7)">7</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(8)">8</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(9)">9</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add('/')">/</button>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col col-20 col-offset-10">
+          <button class="button button-light button-stretch"></button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add(0)">0</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="calculate(expression)">=</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-light button-stretch" ng-click="add('*')">*</button>
+      </div>
+  </div>
+</div>
+
+  </ion-content>
+</ion-view>

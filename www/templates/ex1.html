@@ -1,0 +1,84 @@
+<ion-view view-title="Sentential Logic Exercise 3">
+  <ion-content>
+    <h1>Exercise 1</h1>
+
+<style>
+
+    body{
+      width:100%
+    }
+    table {
+        margin: 0 auto;
+        border-collapse: separate;
+        width: 50%;
+        border: 1px solid black;
+
+    }
+
+    td {
+        border: 1px solid black;
+        padding:(0,0,0,0);
+    }
+
+    tr {
+        padding:(0,0,0,0);
+    }
+
+</style>
+
+    <p><style="text-align: center">Conditional Truth Table</style></p>
+    <table style="display: inline-block; text-align: center; height:auto; width:auto">
+      <tr style>
+        <td width="33.33%"> <img src="img/pprop.png">  </td>
+        <td width="33.33%"> <img src="img/conditional.png"> </td>
+        <td width = "33.33%"> <img src="img/qprop.png"> </td>
+      </tr>
+
+      <tr>
+        <td width="33.33%"> <img src="img/truth.png"> </td>
+        <td width="33.33%">
+          <h:form style="display: inline-block; text-align: center; height:auto; width:auto">
+          <input id="cb1" type="checkbox" class="tgl tgl-flip"/>
+          <label data-tg-off="False" data-tg-on="True!" for="cb1" class="tgl-btn" ng-model="conditional[0]"></label>
+        </h>
+        </td>
+        <td width = "33.33%"> <img src="img/truth.png"></td>
+      </tr>
+      <tr>
+        <td width="33.33%"> <img src="img/truth.png"> </td>
+        <td width="33.33%">
+            <h:form style="display: inline-block; text-align: center; height:auto; width:auto">
+          <input id="cb2" type="checkbox" class="tgl tgl-flip"/>
+          <label data-tg-off="False" data-tg-on="True!" for="cb2" class="tgl-btn" ng-model="conditional[1]"></label>
+         </td>
+         </h>
+        <td width = "33.33%"> <img src="img/false.png"> </td>
+      </tr>
+      <tr>
+        <td width="33.33%"> <img src="img/false.png"> </td>
+        <td width="33.33%">
+          <h:form style="display: inline-block; text-align: center; height:auto; width:auto">
+          <input id="cb3" type="checkbox" class="tgl tgl-flip"/>
+          <label data-tg-off="False" data-tg-on="True!" for="cb3" class="tgl-btn" ng-model="conditional[2]"></label>
+        </td>
+        </h>
+        <td width = "33.33%"> <img src="img/truth.png"> </td>
+      </tr>
+      <tr>
+        <td width="33.33%"> <img src="img/false.png"> </td>
+        <td width="33.33%">
+          <h:form style="display: inline-block; text-align: center; height: auto; width: auto">
+          <input id="cb4" type="checkbox" class="tgl tgl-flip"/>
+          <label data-tg-off="False" data-tg-on="True!" for="cb4" class="tgl-btn" ng-model="conditional[3]"></label>
+         </td>
+         </h>
+        <td width = "33.33%"> <img src="img/false.png"> </td>
+      </tr>
+    </table>
+
+
+<a class="btn btn-full" ui-sref="app.browse">Next</a>
+
+
+  </ion-content>
+  </ion-view>

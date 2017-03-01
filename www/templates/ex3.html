@@ -1,0 +1,382 @@
+<ion-view view-title="Sentential Logic Exercise 3">
+  <ion-content>
+
+  <!-- <div class="list list-inset">
+    <label class="item item-input">
+        <input ng-model="expression" type="text" placeholder="Math Goes Here" />
+    </label>
+  </div>  -->
+
+  <div class="card padding-vertical">
+  <ion-slide-box style="padding-bottom:25px" on-slide-changed="slideHasChanged()">
+   <ion-slide>
+      <div class = "box box1" style="padding-left:20px; padding-right:20px">
+        <form novalidate="novalidate" on-valid-submit="save()">
+          <h4 style="text-align:center">Question 1</h4>
+          <div class="list card">
+            <h5> <u> Given that: </u> <br> </h5>
+            <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+            P: Jane is going to a party this weekend. <br>
+            Q: Jane is going to study this weekend.</button>
+            <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+            <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+            "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+              <hr style="width:95%">
+             <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[0]}}</font></button>
+             <label id = "gone0" class="item item-input validated">
+               <span class="input-label">Logical Expression:</span>
+               <input ng-model="expression[0]" type="text" placeholder="Logical Expression"/>
+             </label>
+           </div>
+          <button type="submit" class="button button-block button-balanced" ng-click="check(expression[0])">
+            <strong>Check</strong>
+          </button>
+        </form>
+        <br>
+      <hr style="width:95%">
+      <br>
+    </div>
+
+    </ion-slide>
+
+       <ion-slide>
+        <div class = "box box2" style="padding-left:20px; padding-right:20px">
+          <form novalidate="novalidate" on-valid-submit="save()">
+            <h4 style="text-align:center">Question 2</h4>
+            <div class="list card">
+              <h5> <u> Given that: </u> <br> </h5>
+              <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+              P: Jane is going to a party this weekend. <br>
+              Q: Jane is going to study this weekend.</button>
+              <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+              <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+              "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+                <hr style="width:95%">
+               <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[1]}}</font></button>
+               <label id = "gone1" class="item item-input validated">
+                 <span class="input-label">Logical Expression:</span>
+                 <input ng-model="expression[1]" type="text" placeholder="Logical Expression"/>
+               </label>
+             </div>
+            <button type="submit" class="button button-block button-balanced">
+              <strong>Check</strong>
+            </button>
+          </form>
+          <br>
+        <hr style="width:95%">
+        <br>
+      </div>
+
+   </ion-slide>
+
+   <ion-slide>
+    <div class = "box box3" style="padding-left:20px; padding-right:20px">
+      <form novalidate="novalidate" on-valid-submit="save()">
+        <h4 style="text-align:center">Question 3</h4>
+        <div class="list card">
+          <h5> <u> Given that: </u> <br> </h5>
+          <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+          P: Jane is going to a party this weekend. <br>
+          Q: Jane is going to study this weekend.</button>
+          <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+          <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+          "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+            <hr style="width:95%">
+           <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[2]}}</font></button>
+           <label id = "gone2" class="item item-input validated">
+             <span class="input-label">Logical Expression:</span>
+             <input ng-model="expression[2]" type="text" placeholder="Logical Expression"/>
+           </label>
+         </div>
+        <button type="submit" class="button button-block button-balanced">
+          <strong>Check</strong>
+        </button>
+      </form>
+      <br>
+    <hr style="width:95%">
+    <br>
+  </div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box4" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 4</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[3]}}</font></button>
+        <label id = "gone3" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[3]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box5" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 5</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following <br> into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[4]}}</font></button>
+        <label id = "gone4" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[4]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced" ng-click="check()">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box6" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 6</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[5]}}</font></button>
+        <label id = "gone5" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[5]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box7" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 7</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[6]}}</font></button>
+        <label id = "gone6" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[6]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box8" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 8</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[7]}}</font></button>
+        <label id = "gone7" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[7]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box9" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 9</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[8]}}</font></button>
+        <label id = "gone8" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[8]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+<ion-slide>
+ <div class = "box box10" style="padding-left:20px; padding-right:20px">
+   <form novalidate="novalidate" on-valid-submit="save()">
+     <h4 style="text-align:center">Question 10</h4>
+     <div class="list card">
+       <h5> <u> Given that: </u> <br> </h5>
+       <button class="button button-outline button-royal button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; margin-bottom:5px; opacity:initial">
+       P: Jane is going to a party this weekend. <br>
+       Q: Jane is going to study this weekend.</button>
+       <h5> <u> Translate the following into sentential logic: </u> <br> </h5>
+       <button class="button button-outline button-calm button-stretch" ng-disabled="true" style="line-height:18px; margin-top:5px; opacity:initial">
+       "Jane is going to a party this weekend or Jane is going to study this weekend." </button>
+         <hr style="width:95%">
+        <h5 style="text-align:center">   <button class="button button-energized button-stretch" ng-disabled="true" style="opacity:initial"> Logical Expression: <font color="black">{{expression[9]}}</font></button>
+        <label id = "gone9" class="item item-input validated">
+          <span class="input-label">Logical Expression:</span>
+          <input ng-model="expression[9]" type="text" placeholder="Logical Expression"/>
+        </label>
+      </div>
+     <button type="submit" class="button button-block button-balanced">
+       <strong>Check</strong>
+     </button>
+   </form>
+   <br>
+ <hr style="width:95%">
+ <br>
+</div>
+</ion-slide>
+
+
+
+
+
+
+</ion-slide-box>
+</div>
+
+    <div class="row" style="center-vertical">
+      <div class="col col-20 col-offset-10">
+             <button class="button button-calm button-stretch" ng-click="add('A')">A</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-calm button-stretch" ng-click="add('B')">B</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-royal button-stretch" ng-click="add('P')">P</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-royal button-stretch" ng-click="add('Q')">Q</button>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col col-20 col-offset-10">
+          <button class="button button-outline button-balanced button-stretch" ng-click="add('T')">T</button>
+      </div>
+      <div class="col col-20">
+        <button class="button button-outline button-balanced button-stretch" ng-click="add('F')">F</button>
+      </div>
+      <div class="col col-20">
+
+          <button class="button button-assertive button-stretch" ng-click="add('\u2194')">&#8596;</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-assertive button-stretch" ng-click="add('\u2192')">&#8594;</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-20 col-offset-10">
+        <button class="button button-outline button-stretch button-positive" ng-click="clear()" style="font-size:50%; line-height:8px">
+           <p> <br> CLEAR  </p>
+         </button>
+      </div>
+       <div class="col col-20">
+
+          <button class="button button-energized button-stretch" ng-click="add('\u22c0')"><font color="black">&#8896;</font></button>
+      </div>
+      <div class="col col-20">
+         <button class="button button-energized button-stretch" ng-click="add('\u22c1')"><font color="black">&#8897;</font></button>
+     </div>
+      <div class="col col-20">
+        <button class="button button-dark button-stretch" ng-click="add('\u00ac')">&#172;</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-20 col-offset-10">
+        <button class="button button-outline button-stretch button-dark" ng-click="backspace()" style="font-size:50%; line-height:12px;">
+          <p> <br> BACK <br>
+            SPACE </p> </button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-balanced button-stretch" ng-click="add('\u02eb')">&#747;</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-stable button-stretch" ng-click="add('(')">(</button>
+      </div>
+      <div class="col col-20">
+          <button class="button button-stable button-stretch" ng-click="add(')')">)</button>
+      </div>
+    </div>
+
+  <div class = "card padding-horizontal">
+    <div class = "card padding-horizontal" style="background-color:lightgray">
+    <h5 style="text-align:center"> Press "Check" When You Are Done and Wait for Feedback </h5>
+</div>
+</div>
+
+  </ion-content>
+</ion-view>

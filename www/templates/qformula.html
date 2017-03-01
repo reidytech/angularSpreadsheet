@@ -1,0 +1,94 @@
+<ion-view view-title="Using the Quadratic Formula">
+<ion-content>
+
+<div class="item item-stable" style="text-align: center; border: 2px solid black; margin-top: 1vw;">
+
+<div class="list list-inset">
+<div class = "item" style="text-align: center; border: 1px solid black;>
+
+<div class="row"> 
+	<div class = "col col-100" style="text-align: center;">
+		<u>
+		<h1 style="font-size: 5vw">
+			Quadratic Equation Solver
+		</h1>
+		</u>
+	</div>
+</div>
+</div>
+
+	
+<div class = "item item-light" style="text-align: center; border: 1px solid black;>
+	<div class="row">
+		<div class = "col"> 
+    			          
+                                    <p class="jax" math-jax-bind="equation"></p>
+			
+	</div>
+	</div>
+	 
+
+
+<div class = "item item-light" style="text-align: center; border: 1px solid black;>
+
+
+<div class="row" style="font: Amatic SC,cursive; font-weight: 300; font-size: 6vw; text-align: center;">
+	
+	
+	<div class = "col col-100">
+		<div class="item item-input-extra-within" style="display: inline-block; width: 5vw; height: 4vw;">
+			<input type="text" placeholder="a" ng-model="get.A" ng-change="updateA(get.A)" style="font-size: 3.5vw;">
+  		</div>
+  	 <div style="display: inline-block; transform: translate(0vw, .35vw);"> <b> X<sup>2 </sup> + </div>    
+  	
+
+
+    	 <div class="item item-input-extra-within" style="display: inline-block; width: 5vw; height: 4vw;">
+   		<input type="text" placeholder="b" ng-model="get.B" ng-change="updateB(get.B)" style="font-size: 3.5vw;">
+  	</div> 
+
+<div style="display: inline-block; transform: translate(0vw, .35vw);"> <b> X + </div>
+
+ 	 
+
+
+	<div class="item item-input-extra-within" style="display: inline-block; width: 5vw; height: 4vw; ">
+		<input type="text" placeholder="c" ng-model="get.C" ng-change="updateC(get.C)" style="font-size: 3.5vw;">
+  	</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="item item-stable" style="text-align: center; border: 1px solid black;">
+	<a class="button icon-right ion-chevron-right button-calm" ng-click="showNextDiv()" style="font-size: 200%"> 
+		Show Next Step
+	</a>
+</div>
+
+
+
+<div class = "item item-light" style="text-align: center; border: 1px solid black;">
+		<div ng-show="divTrue">
+			<div static-include="templates/quadInclude.html"></div>
+		</div>	
+</div>				
+			
+	
+	
+
+	
+	
+	
+	
+	
+
+</div>
+</div>
+
+  
+
+</ion-content>
+</ion-view>
