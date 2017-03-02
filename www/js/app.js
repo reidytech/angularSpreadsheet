@@ -117,17 +117,17 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
 .factory('InboxFactory', function InboxFactory($q, $http, $location){
 	var exports = {};
 	exports.messages = [];
-	
+
 	exports.goToMessage = function(id) {
 		if(angular.isNumber(id)){
 		//$location.path('inbox/email/' + id)
 		}
 	}
-	
+
 	exports.deleteMessage = function (id, index) {
 		this.messages.splice(index, 1);
-	}	
-	
+	}
+
 	exports.getMessages = function(){
 		var deferred = $q.defer();
 		return $http.get('json/emails.json')
@@ -140,7 +140,7 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
 		});
 		return deferred.promise;
 	};
-	
+
 	return exports;
 })
 
@@ -159,7 +159,7 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
   .state('app.ex1', {
     url: '/ex1',
     views: {
-      'menuContent': {
+      'tab-ex1': {
         templateUrl: 'templates/ex1.html',
         controller: 'TruthController'
       }
@@ -169,7 +169,7 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
   .state('app.ex3', {
     url: '/ex3',
     views: {
-      'menuContent': {
+      'tab-ex3': {
         templateUrl: 'templates/ex3.html',
         controller: 'CalculatorController'
       }
@@ -179,7 +179,7 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
   .state('app.ex2', {
       url: '/ex2',
       views: {
-        'menuContent': {
+        'tab-ex2': {
           templateUrl: 'templates/ex2.html',
           controller: 'VoteCtrl'
         }
@@ -188,16 +188,16 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
   .state('app.ex4', {
       url: '/ex4',
       views: {
-        'menuContent': {
+        'tab-ex4': {
           templateUrl: 'templates/ex4.html',
         }
       }
     })
-    
+
     .state('app.qformula', {
-    url: '/qformula', 
+    url: '/qformula',
     views: {
-    	'menuContent': {
+    	'tab-qformula': {
     	 templateUrl: 'templates/qformula.html',
     	 controller: 'FormulaCtrl'
     	 }
@@ -206,23 +206,23 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
     .state('app.welcome', {
       url: '/welcome',
       views: {
-        'menuContent': {
+        'tab-welcome': {
           templateUrl: 'templates/welcome.html',
           controller: 'WelcomeCtrl'
         }
       }
     })
-    
+
     .state('app.inbox', {
     	url: '/inbox',
     	views: {
-    	'menuContent': {
+    	'tab-inbox': {
     	templateUrl: 'templates/inbox.html',
     	controller: 'InboxCtrl'
     	}
        }
     })
-    
+
     .state('app.inbox/email/:id', {
     url: '/email',
     views: {
@@ -232,7 +232,7 @@ angular.module('starter', ['ionic', 'starter.staticInclude', 'starter.controller
     }
    }
   });
-    
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/welcome');
 
